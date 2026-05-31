@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Visor 360</title>
+  <style>
+    body, html {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    #visor {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <!-- Importar librería desde CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/photo-sphere-viewer@4/dist/photo-sphere-viewer.css">
+  <script src="https://unpkg.com/three/build/three.min.js"></script>
+  <script src="https://unpkg.com/photo-sphere-viewer@4/dist/photo-sphere-viewer.js"></script>
+</head>
+<body>
+  <div id="visor"></div>
+  <script>
+    const viewer = new PhotoSphereViewer.Viewer({
+      container: document.getElementById('visor'),
+      panorama: 'cancha11.jpg', // aquí pones tu imagen panorámica
+      navbar: ['zoom', 'fullscreen'],
+      defaultYaw: 0,
+    });
+  </script>
+</body>
+</html>
